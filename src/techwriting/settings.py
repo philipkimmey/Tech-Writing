@@ -97,5 +97,6 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.admin',
-    'techwriting.
+    'techwriting.meetings',
+    'techwriting.assignments',
 )
