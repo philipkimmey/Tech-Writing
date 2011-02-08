@@ -39,6 +39,7 @@ TIME_ZONE = 'America/Chicago'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
+MEDIA_ROOT = os.path.join(BASE_PATH, 'media')
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
