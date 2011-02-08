@@ -1,0 +1,7 @@
+{% extends "base_sb.html" %}
+{% block main_content %}
+    <h2>{{ meeting.title }}</h2>
+    {{ meeting.start }} &mdash; {{ meeting.finish }}<br />
+    {{ meeting.short_description }}<br />
+    {{ meeting.description }}
+{% endblock %}
