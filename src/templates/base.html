@@ -3,14 +3,26 @@
         <link rel="stylesheet" href="/static/css/blueprint/screen.css" type="text/css" media="screen, projection">
         <link rel="stylesheet" href="/static/css/blueprint/print.css" type="text/css" media="print">
         <!--[if lt IE 8]><link rel="stylesheet" href="/static/css/blueprint/ie.css" type="text/css" media="screen, projection"><![endif]-->
-        <title>Tech Writing</title>
+        <title>Tech Writing &mdash; Spring 2011</title>
     </head>
     <body>
         <div class="container">
-            <h1>Tech Writing</h1>
+            <div class="span-24">
+                <div class="span-12">
+                    <span style="font-size: xx-large;">Tech Writing &mdash; Spring 2011</span>
+                </div>
+                <div class="span-12 last">
+                    <ul style="list-style: none;">
+                        <a href="/"><li style="position: relative; float: left; margin-left: 15px;">Home</li></a>
+                        <a href="/syllabus/"><li style="position: relative; float: left; margin-left: 15px;">Syllabus</li></a>
+                    </ul>
+                </div>
+            </div>
+            <div class="span-24">
             {% block content %}
 
             {% endblock %}
+            </div>
         </div>
     </body>
 </html>

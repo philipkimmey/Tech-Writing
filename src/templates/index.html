@@ -1,18 +1,7 @@
 {% extends 'base_sb.html' %}
-{% block sb_content %}
-    <h3>Upcoming Meetings</h3>
-
-    <h3>Upcoming Assignments</h3>
-    {% if user.is_authenticated %}
-        Please 
-    {% else %}
-        Please login to view assignments.
-    {% endif %}
-{% endblock %}
 {% block main_content %}
     <div class="span-16 last">
         <h2>Welcome to the Tech Writing Website</h2>
-            <a href="/syllabus/">Syllabus</a>
             <h4>Course Objectives</h4>
             <ul>
                 <li>Students will be able to present ideas about complex technical subjects in a succinct, organized way to an appropriate audience</li>

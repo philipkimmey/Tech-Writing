@@ -9,7 +9,11 @@ class Meeting(models.Model):
     description = models.TextField()
 
 class ClassMeeting(Meeting):
-    pass
+    def __unicode__(self):
+        return self.title
+    def get_absolute_url(self):
+        return "/course/%s/" % self.pk
 
 class GradingMeeting(Meeting):
-    pass
+    def __unicode__(self):
+        return self.title

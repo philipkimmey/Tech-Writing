@@ -8,8 +8,7 @@ admin.autodiscover()
 urlpatterns = patterns('',
     (r'^$', direct_to_template, {'template': 'index.html'}), 
     (r'^syllabus/$', direct_to_template, {'template': 'syllabus.html'}),
-    # Example:
-    # (r'^techwriting/', include('techwriting.foo.urls')),
+    (r'^course/(?P<pk>\d+)/$', 'techwriting.meetings.views.course'),
 
     (r'^admin/doc/', include('django.contrib.admindocs.urls')),
 
