@@ -8,8 +8,6 @@
                 <strong>{{ course_meeting.start|date:"F jS P" }}&mdash;{{ course_meeting.finish|date:"P" }}</strong><br />
                 {{ course_meeting.short_description }}
                 <hr class="space" />
-
-
             {% endfor %}
         <h3>Upcoming Assignments</h3>
         {% if user.is_authenticated %}
@@ -17,6 +15,12 @@
         {% else %}
             Please login to view assignments.
         {% endif %}
+        <hr class="space" />
+        <h3>Assignments</h3>
+        {% for assignment in assignments %}
+            <a href="{{ assignment.get_absolute_url }}">{{ assignment.title }}</a>
+            <hr class="space" />
+        {% endfor %}
     {% endblock %}
     </div>
     <div class="span-16 last">
