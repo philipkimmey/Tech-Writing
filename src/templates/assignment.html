@@ -1,0 +1,9 @@
+{% extends "base_sb.html" %}
+{% block main_content %}
+    <h2>{{ assignment.title }}</h2>
+    <p>{{ assignment.description }}</p>
+    <h3>Files</h3>
+    {% for f in assignment.assignmentattachment_set.all %}
+    <a href="{{ f.file.url }}">{{ f.title }}</a><br />
+    {% endfor %}
+{% endblock %}
