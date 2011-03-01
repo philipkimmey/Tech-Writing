@@ -8,7 +8,9 @@ def course_meetings(request):
     return {'course_meetings': course_meetings}
 
 def grading_meetings(request):
-    grading_meetings = GradingMeeting.objects.filter(user=request.user).filter(finish__gt=datetime.now()).order_by('finish')[:3]
+    grading_meetings = None
+    if request.user.is_authenticated():
+        grading_meetings = GradingMeeting.objects.filter(user=request.user).filter(finish__gt=datetime.now()).order_by('finish')[:3]
     return {'grading_meetings': grading_meetings}
 
 def assignments(request):
