@@ -3,7 +3,7 @@
     {% load markup %}
     <h2>{{ meeting.title }}</h2>
     {{ meeting.start }} &mdash; {{ meeting.finish }}<br />
-    <p><strong>{{ meeting.short_description }}</strong></p>
+    <p>Location: {{ meeting.location }}</p>
     <p>{{ meeting.description|markdown }}</p>
     {% for assignment in meeting.assignment_set.all %} 
     <a href="{{ assignment.get_absolute_url }}">{{ assignment }}</a><br />

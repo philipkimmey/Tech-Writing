@@ -9,6 +9,7 @@ urlpatterns = patterns('',
     (r'^$', direct_to_template, {'template': 'index.html'}), 
     (r'^syllabus/$', direct_to_template, {'template': 'syllabus.html'}),
     (r'^course/(?P<pk>\d+)/$', 'techwriting.meetings.views.course'),
+    (r'^grading/(?P<pk>\d+)/$', 'techwriting.meetings.views.grading'),
 
     (r'^assignment/(?P<pk>\d+)/$', 'techwriting.assignments.views.assignment'),
 

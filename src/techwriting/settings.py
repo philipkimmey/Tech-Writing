@@ -107,5 +107,6 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
     'techwriting.context_processors.course_meetings',
+    'techwriting.context_processors.grading_meetings',
     'techwriting.context_processors.assignments',
 )

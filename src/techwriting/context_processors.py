@@ -7,8 +7,9 @@ def course_meetings(request):
     course_meetings = ClassMeeting.objects.filter(finish__gt=datetime.now()).order_by('finish')[:3]
     return {'course_meetings': course_meetings}
 
-def assignment_meetings(request):
-    return {}
+def grading_meetings(request):
+    grading_meetings = GradingMeeting.objects.filter(finish__gt=datetime.now()).order_by('finish')[:3]
+    return {'grading_meetings': grading_meetings}
 
 def assignments(request):
     assignments = Assignment.objects.all()

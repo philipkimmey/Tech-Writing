@@ -1,16 +1,21 @@
 {% extends 'base.html' %}
 {% block content %}
     <div class="span-8">
-    {% block sb_content %}
-        <h3>Upcoming Meetings</h3>
+        {% block sb_content %}
+        <h2>Upcoming Meetings</h2>
+        <h3>Class Meetings</h3>
             {% for course_meeting in course_meetings %}
                 <a href="{{ course_meeting.get_absolute_url }}"><h3><em>{{ course_meeting.title }}</em></h3></a>
                 <strong>{{ course_meeting.start|date:"F jS P" }}&mdash;{{ course_meeting.finish|date:"P" }}</strong><br />
                 {{ course_meeting.short_description }}
                 <hr class="space" />
             {% endfor %}
-        <h3>Upcoming Assignments</h3>
+        <h3>Grading Meetings</h3>
         {% if user.is_authenticated %}
+            {% for grading_meeting in grading_meetings %}
+            <a href="{{ grading_meeting.get_absolute_url }}"><h3><em>{{ grading_meeting.start }}</em></h3></a>
+            <hr class="space" />
+            {% endfor %}
             These are some upcoming grading meetings
         {% else %}
             Please login to view assignments.
