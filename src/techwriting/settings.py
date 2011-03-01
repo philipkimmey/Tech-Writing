@@ -39,7 +39,7 @@ TIME_ZONE = 'America/Chicago'
 # http://www.i18nguy.com/unicode/language-identifiers.html
 LANGUAGE_CODE = 'en-us'
 
-MEDIA_ROOT = os.path.join(BASE_PATH, 'media')
+MEDIA_ROOT = os.path.join(BASE_PATH, 'src', 'static', 'media')
 SITE_ID = 1
 
 # If you set this to False, Django will make some optimizations so as not
@@ -52,12 +52,10 @@ USE_L10N = True
 
 # Absolute path to the directory that holds media.
 # Example: "/home/media/media.lawrence.com/"
-MEDIA_ROOT = ''
-
 # URL that handles the media served from MEDIA_ROOT. Make sure to use a
 # trailing slash if there is a path component (optional in other cases).
 # Examples: "http://media.lawrence.com", "http://example.com/media/"
-MEDIA_URL = ''
+MEDIA_URL = '/static/media/'
 
 # URL prefix for admin media -- CSS, JavaScript and images. Make sure to use a
 # trailing slash.
@@ -98,6 +96,7 @@ INSTALLED_APPS = (
     'django.contrib.sites',
     'django.contrib.messages',
     'django.contrib.admin',
+    'django.contrib.markup',
     'techwriting.meetings',
     'techwriting.assignments',
 )
@@ -108,4 +107,5 @@ TEMPLATE_CONTEXT_PROCESSORS = (
     'django.core.context_processors.i18n',
     'django.core.context_processors.media',
     'techwriting.context_processors.course_meetings',
+    'techwriting.context_processors.assignments',
 )

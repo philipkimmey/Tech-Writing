@@ -4,8 +4,9 @@ from django.conf import settings
 from techwriting.meetings.models import ClassMeeting, GradingMeeting
 
 def get_file_path(instance, filename):
+    fn = filename.split('.')[-2]
     extension = filename.split('.')[-1]
-    return "%s.%s" % (instance.pk, extension)
+    return "%s.%s" % (fn, extension)
 
 class Assignment(models.Model):
     title = models.CharField(max_length=60)
