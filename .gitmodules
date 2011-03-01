@@ -1,3 +1,6 @@
 [submodule "submodules/django-sendfile"]
 	path = submodules/django-sendfile
 	url = git://github.com/johnsensible/django-sendfile.git
+[submodule "submodules/python-markdown"]
+	path = submodules/python-markdown
+	url = git://gitorious.org/python-markdown/mainline.git
