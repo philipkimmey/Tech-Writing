@@ -18,7 +18,7 @@
                         <a href="/syllabus/"><li class="header">Syllabus</li></a>
                         {% if user.is_authenticated %}
                         <a href="/accounts/logout/"><li class="header">Logout</li></a>
-                        <li class="header">Welcome {{ user.get_full_name }}</li>
+                            <li class="header">Welcome {% if user.get_full_name %}{{ user.get_full_name }}{% else %}{{ user.username }}{% endif %}</li>
                         {% else %}
                         <a href="/accounts/login/"><li class="header">Login</li></a>
                         {% endif %}
