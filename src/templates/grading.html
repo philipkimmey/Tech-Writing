@@ -5,6 +5,7 @@
     {{ meeting.start }} &mdash; {{ meeting.finish }}<br />
     <p>Location: {{ meeting.location }}</p>
     <p>{{ meeting.description|markdown }}</p>
+    <h3>Assignments to Discuss:</h3>
     {% for assignment in meeting.assignment_set.all %} 
     <a href="{{ assignment.get_absolute_url }}">{{ assignment }}</a><br />
     {% endfor %}
