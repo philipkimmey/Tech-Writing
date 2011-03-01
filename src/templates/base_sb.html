@@ -18,7 +18,7 @@
         <hr class="space" />
         <h3>Assignments</h3>
         {% for assignment in assignments %}
-            <a href="{{ assignment.get_absolute_url }}">{{ assignment.title }}</a>
+            <a href="{{ assignment.get_absolute_url }}" class="assignment_link">{{ assignment.title }}</a>
             <hr class="space" />
         {% endfor %}
     {% endblock %}

@@ -1,0 +1,19 @@
+div.header {
+    padding-top: 1em;
+}
+
+ul.header {
+    list-style: none;
+}
+
+li.header {
+    color: black;
+    font-size: large;
+    position: relative;
+    float: left;
+    margin-left: 15px;
+}
+
+a.assignment_link {
+    color: black;
+}
